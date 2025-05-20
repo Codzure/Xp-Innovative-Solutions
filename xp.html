@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XP Innovative Solutions - Leading mobile app development and UI/UX design company. We create beautiful, functional digital experiences.">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="author" content="XP Innovative Solutions">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/images/icon-192x192.png">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="images/bg.jpg" imagesrcset="images/bg.jpg 1x, images/bg@2x.jpg 2x">
+    
+    <title>XP Innovative Solutions - Mobile App Development & UI/UX Design</title>
+  
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="XP Solutions specializes in Mobile App Development and UI/UX Design, empowering businesses with innovative digital solutions.">
+    <meta name="keywords" content="Mobile App Development, UI/UX Design, Digital Solutions, XP Solutions, Android, iOS, Figma, Mobile App developers in Kenya,Android apps  ">
+    <meta name="author" content="XP Solutions">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="XP Solutions – Elevate Your Digital Presence">
+    <meta property="og:description" content="XP Solutions specializes in Mobile App Development and UI/UX Design, empowering businesses with innovative digital solutions.">
+    <meta property="og:image" content="images/hero-bg.jpg">
+    <meta property="og:url" content="https://www.xpinnovativesolutions.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XP Solutions – Elevate Your Digital Presence">
+    <meta name="twitter:description" content="XP Solutions specializes in Mobile App Development and UI/UX Design, empowering businesses with innovative digital solutions.">
+    <meta name="twitter:image" content="images/hero-bg.jpg">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "XP Innovative Solutions",
+      "url": "https://www.xpsolutions.com",
+      "logo": "https://www.xpsolutions.com/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/xpsolutions",
+        "https://www.twitter.com/xpsolutions",
+        "https://www.linkedin.com/company/xpsolutions"
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#3b82f6', secondary: '#10b981' },
+                    borderRadius: {
+                        'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px',
+                        'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-section { 
+            background-image: url('https://public.readdy.ai/ai/img_res/efef4c2eaaea46ce8b25cc72b818878b.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delay-1 { animation: float 6s ease-in-out 2s infinite; }
+        .animate-float-delay-2 { animation: float 6s ease-in-out 4s infinite; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* Futuristic Animation Styles */
+        .perspective-1000 { perspective: 1000px; }
+        
+        /* Holographic Cube */
+        .holographic-cube {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            transform-style: preserve-3d;
+            transform: translate(-50%, -50%) rotateX(45deg) rotateY(45deg);
+            animation: cube-rotate 20s infinite linear;
+        }
+        
+        @keyframes cube-rotate {
+            0% { transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg); }
+            100% { transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg); }
+        }
+        
+        .cube-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px solid rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+        }
+        
+        .front { transform: translateZ(75px); }
+        .back { transform: translateZ(-75px) rotateY(180deg); }
+        .right { transform: translateX(75px) rotateY(90deg); }
+        .left { transform: translateX(-75px) rotateY(-90deg); }
+        .top { transform: translateY(-75px) rotateX(90deg); }
+        .bottom { transform: translateY(75px) rotateX(-90deg); }
+        
+        /* Floating Particles */
+        .particles-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.8);
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.4);
+            animation: float-particle 8s infinite ease-in-out;
+        }
+        
+        .p1, .p5, .p9 { background: rgba(59, 130, 246, 0.8); }
+        .p2, .p6, .p10 { background: rgba(16, 185, 129, 0.8); }
+        .p3, .p7, .p11 { background: rgba(139, 92, 246, 0.8); }
+        .p4, .p8, .p12 { background: rgba(236, 72, 153, 0.8); }
+        
+        .p1 { top: 20%; left: 10%; animation-delay: 0s; }
+        .p2 { top: 30%; left: 85%; animation-delay: 1s; }
+        .p3 { top: 70%; left: 20%; animation-delay: 2s; }
+        .p4 { top: 80%; left: 80%; animation-delay: 3s; }
+        .p5 { top: 40%; left: 30%; animation-delay: 4s; }
+        .p6 { top: 60%; left: 70%; animation-delay: 5s; }
+        .p7 { top: 10%; left: 40%; animation-delay: 6s; }
+        .p8 { top: 90%; left: 60%; animation-delay: 7s; }
+        .p9 { top: 50%; left: 15%; animation-delay: 1.5s; }
+        .p10 { top: 25%; left: 75%; animation-delay: 2.5s; }
+        .p11 { top: 75%; left: 35%; animation-delay: 3.5s; }
+        .p12 { top: 15%; left: 65%; animation-delay: 4.5s; }
+        
+        @keyframes float-particle {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.8; }
+            25% { transform: translateY(-20px) translateX(10px) scale(1.2); opacity: 1; }
+            50% { transform: translateY(0) translateX(20px) scale(1); opacity: 0.8; }
+            75% { transform: translateY(20px) translateX(10px) scale(1.2); opacity: 1; }
+        }
+        
+        /* Digital Rings */
+        .digital-rings {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .ring1 {
+            width: 200px;
+            height: 200px;
+            border-color: rgba(59, 130, 246, 0.5);
+            animation: ring-rotate 15s linear infinite, ring-pulse 4s ease-in-out infinite;
+        }
+        
+        .ring2 {
+            width: 250px;
+            height: 250px;
+            border-color: rgba(16, 185, 129, 0.5);
+            animation: ring-rotate-reverse 20s linear infinite, ring-pulse 6s ease-in-out infinite;
+        }
+        
+        .ring3 {
+            width: 300px;
+            height: 300px;
+            border-color: rgba(139, 92, 246, 0.5);
+            animation: ring-rotate 25s linear infinite, ring-pulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes ring-rotate {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        @keyframes ring-rotate-reverse {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(-360deg); }
+        }
+        
+        @keyframes ring-pulse {
+            0%, 100% { opacity: 0.3; border-width: 2px; }
+            50% { opacity: 0.8; border-width: 3px; }
+        }
+        
+        /* Holographic Text */
+        .holographic-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.4);
+            animation: text-glow 3s ease-in-out infinite;
+        }
+        
+        .glow-text-sm {
+            text-shadow: 0 0 5px rgba(59, 130, 246, 0.8), 0 0 10px rgba(59, 130, 246, 0.4);
+            animation: text-glow 3s ease-in-out infinite 1.5s;
+        }
+        
+        @keyframes text-glow {
+            0%, 100% { text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.4); }
+            50% { text-shadow: 0 0 15px rgba(59, 130, 246, 1), 0 0 30px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4); }
+        }
+        
+        /* Scanning Effect */
+        .scanner-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.8), transparent);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+            animation: scan 3s ease-in-out infinite;
+        }
+        
+        @keyframes scan {
+            0% { top: 0; opacity: 0; }
+            5% { opacity: 1; }
+            95% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+        
+        /* Additional Futuristic Elements */
+        
+        /* Holographic Grid */
+        .holographic-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: grid-pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes grid-pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        
+        /* Data Stream */
+        .data-stream {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .data-bit {
+            position: absolute;
+            font-family: monospace;
+            font-size: 12px;
+            color: rgba(59, 130, 246, 0.8);
+            text-shadow: 0 0 5px rgba(59, 130, 246, 0.8);
+            animation: data-fall 8s linear infinite;
+        }
+        
+        .bit1 { left: 20%; top: -20px; animation-delay: 0s; }
+        .bit2 { left: 40%; top: -20px; animation-delay: 1.3s; }
+        .bit3 { left: 60%; top: -20px; animation-delay: 2.6s; }
+        .bit4 { left: 80%; top: -20px; animation-delay: 3.9s; }
+        .bit5 { left: 30%; top: -20px; animation-delay: 5.2s; }
+        .bit6 { left: 70%; top: -20px; animation-delay: 6.5s; }
+        
+        @keyframes data-fall {
+            0% { transform: translateY(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(400px); opacity: 0; }
+        }
+        
+        /* Glitch Text Effect */
+        .glitch-text {
+            position: relative;
+        }
+        
+        .glitch-text::before,
+        .glitch-text::after {
+            content: 'XP';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+        
+        .glitch-text::before {
+            color: #0ff;
+            z-index: -1;
+            animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+            animation-delay: 0.1s;
+        }
+        
+        .glitch-text::after {
+            color: #f0f;
+            z-index: -2;
+            animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+            animation-delay: 0.2s;
+        }
+        
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        
+        /* Energy Core */
+        .energy-core {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.8) 0%, rgba(59, 130, 246, 0.4) 50%, transparent 70%);
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4);
+            animation: core-pulse 2s ease-in-out infinite;
+            z-index: 5;
+        }
+        
+        @keyframes core-pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+            50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+        }
+        
+        /* Hosting & Domain Section Styles */
+        .server-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: server-grid-pulse 10s ease-in-out infinite;
+        }
+        
+        @keyframes server-grid-pulse {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.5; }
+        }
+        
+        .server-pulse {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            animation: server-pulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes server-pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.5; }
+        }
+        
+        .domain-particle {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.5);
+            filter: blur(20px);
+            animation: float-domain 15s infinite linear;
+        }
+        
+        .d1 { top: 20%; left: 10%; animation-delay: 0s; }
+        .d2 { top: 70%; left: 20%; animation-delay: 3s; }
+        .d3 { top: 40%; left: 80%; animation-delay: 6s; }
+        .d4 { top: 80%; left: 70%; animation-delay: 9s; }
+        .d5 { top: 30%; left: 50%; animation-delay: 12s; }
+        
+        @keyframes float-domain {
+            0% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-50px) translateX(50px); }
+            50% { transform: translateY(0) translateX(100px); }
+            75% { transform: translateY(50px) translateX(50px); }
+            100% { transform: translateY(0) translateX(0); }
+        }
+        
+        /* Floating Technology Icons */
+        .tech-icon-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-tech-icon {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float-tech 20s infinite linear;
+            opacity: 0.95;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .floating-tech-icon::after {
+            content: attr(data-name);
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .floating-tech-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .floating-tech-icon:hover::after {
+            opacity: 1;
+        }
+        
+        .floating-tech-icon img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        
+        .tech-flutter { top: 15%; left: 10%; animation-delay: 0s; }
+        .tech-react { top: 25%; left: 80%; animation-delay: 5s; }
+        .tech-swift { top: 65%; left: 15%; animation-delay: 10s; }
+        .tech-kotlin { top: 40%; left: 75%; animation-delay: 15s; }
+        .tech-android { top: 20%; left: 40%; animation-delay: 7s; }
+        .tech-figma { top: 70%; left: 60%; animation-delay: 12s; }
+        
+        @keyframes float-tech {
+            0% { transform: translateY(0) translateX(0) rotate(0deg); }
+            25% { transform: translateY(-100px) translateX(100px) rotate(5deg); }
+            50% { transform: translateY(0) translateX(200px) rotate(0deg); }
+            75% { transform: translateY(100px) translateX(100px) rotate(-5deg); }
+            100% { transform: translateY(0) translateX(0) rotate(0deg); }
+        }
+        
+        /* Pricing Card Hover Effects */
+        .pricing-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-15px);
+        }
+        
+        .pricing-card .pricing-icon {
+            transition: transform 0.5s ease;
+        }
+        
+        .pricing-card:hover .pricing-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .pricing-feature-tag {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-feature-tag::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .pricing-card:hover .pricing-feature-tag::after {
+            left: 100%;
+        }
+        
+        /* Domain Table Hover Effects */
+        .domain-row {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .domain-row::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: 0.5s;
+        }
+        
+        .domain-row:hover::after {
+            left: 100%;
+        }
+        
+        .domain-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .domain-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+        
+        .domain-btn:hover::after {
+            left: 100%;
+        }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .header-scroll { transition: background-color 0.3s ease; }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0;
+            background-color: #3b82f6; transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        /* Interactive Service Cards */
+        .service-card-container {
+            perspective: 1000px;
+            height: 350px;
+            touch-action: manipulation; /* Improve touch response */
+        }
+        
+        .service-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            -webkit-transform-style: preserve-3d; /* Safari support */
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 0.5rem;
+            will-change: transform; /* Optimize animations */
+            -webkit-backface-visibility: hidden; /* Safari support */
+            backface-visibility: hidden; /* Standard property */
+        }
+        
+        @media (hover: hover) and (pointer: fine) {
+            .service-card-container:hover .service-card {
+                transform: rotateY(180deg);
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .service-card {
+                transition: none;
+            }
+            
+            .service-card-container:hover .service-card {
+                transform: none;
+            }
+        }
+        
+        .service-card-front, .service-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            -webkit-transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+            transform: translate3d(0, 0, 0);
+            -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+            -webkit-font-smoothing: antialiased; /* Improve font rendering */
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Focus styles for accessibility */
+        .service-card-container:focus-within .service-card,
+        .service-card-container:focus-visible .service-card {
+            outline: 3px solid #3b82f6;
+            outline-offset: 4px;
+        }
+        
+        .service-card-front {
+            background-color: white;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card-back {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            transform: rotateY(180deg);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .service-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card-container:hover .service-icon {
+            transform: scale(1.1);
+        }
+        
+        .tech-tag {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            margin: 0.25rem;
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+        }
+        
+        .flip-btn {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 9999px;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .flip-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Pulse animation for the flip button */
+        @keyframes pulse-light {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        .pulse-animation {
+            animation: pulse-light 2s infinite;
+        }
+        .portfolio-item { overflow: hidden; transition: opacity 0.3s ease; }
+        .portfolio-overlay { opacity: 0; background: rgba(59, 130, 246, 0.9); transition: opacity 0.3s ease; }
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+        .portfolio-item img { transition: transform 0.5s ease; }
+        .portfolio-item:hover img { transform: scale(1.05); }
+        .portfolio-item.hidden { opacity: 0; height: 0; margin: 0; padding: 0; overflow: hidden; }
+        .timeline-dot { transition: transform 0.3s ease, background-color 0.3s ease; }
+        .timeline-item:hover .timeline-dot { transform: scale(1.2); background-color: #3b82f6; }
+        .form-input { transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+        .form-input:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); }
+        .social-icon { transition: transform 0.3s ease, color 0.3s ease; }
+        .social-icon:hover { transform: translateY(-5px); color: #3b82f6; }
+        .back-to-top { opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        input[type="checkbox"] {
+            appearance: none; width: 20px; height: 20px; border: 2px solid #d1d5db; border-radius: 4px;
+            outline: none; cursor: pointer; position: relative;
+        }
+        input[type="checkbox"]:checked { background-color: #3b82f6; border-color: #3b82f6; }
+        input[type="checkbox"]:checked::after {
+            content: ""; position: absolute; top: 2px; left: 6px; width: 5px; height: 10px;
+            border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg);
+        }
+        /* Modal Styles */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 100; }
+        .modal-content { position: relative; margin: 5% auto; padding: 20px; width: 90%; max-width: 600px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .modal-close { position: absolute; top: 10px; right: 10px; font-size: 24px; cursor: pointer; color: #333; }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Skip to main content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:bg-white focus:px-4 focus:py-2 focus:rounded focus:shadow-lg focus:z-50">Skip to main content</a>
+    
+    <!-- Header -->
+    <header id="header" class="header-scroll fixed w-full top-0 z-50 bg-transparent transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="text-2xl font-['Pacifico'] text-primary">XP Innovative Solutions</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-gray-800 font-medium">Home</a>
+                <a href="#services" class="nav-link text-gray-800 font-medium">Services</a>
+                <a href="#portfolio" class="nav-link text-gray-800 font-medium">Portfolio</a>
+                <a href="#process" class="nav-link text-gray-800 font-medium">Process</a>
+                <a href="#contact" class="nav-link text-gray-800 font-medium">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Get in Touch</a>
+            <button id="mobile-menu-button" class="lg:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="ri-menu-line ri-2x" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 hidden flex-col pt-20 px-6">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center text-gray-800" title="Close mobile menu">
+            <i class="ri-close-line ri-lg"></i>
+        </button>
+        <nav class="flex flex-col space-y-6 text-center">
+            <a href="#home" class="text-xl font-medium text-gray-800 py-2">Home</a>
+            <a href="#services" class="text-xl font-medium text-gray-800 py-2">Services</a>
+            <a href="#portfolio" class="text-xl font-medium text-gray-800 py-2">Portfolio</a>
+            <a href="#process" class="text-xl font-medium text-gray-800 py-2">Process</a>
+            <a href="#contact" class="text-xl font-medium text-gray-800 py-2">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 hero-section">
+        <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-white/40"></div>
+        <div class="container mx-auto px-6 py-12 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+                <div class="lg:col-span-3">
+                    <div class="fade-in">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            Elevate Your <span class="text-primary relative inline-block">
+                                <span class="relative z-10">Digital Presence</span>
+                                <span class="absolute bottom-2 left-0 w-full h-3 bg-primary/20 -z-10 skew-x-3"></span>
+                            </span> with Innovative Solutions
+                        </h1>
+                        <p class="text-xl text-gray-700 mb-8 max-w-2xl">
+                            We create cutting-edge mobile apps, web applications, and custom software solutions that transform businesses and delight users.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#services" class="px-8 py-4 bg-primary text-white font-medium rounded-button hover:bg-primary/90 transition-colors flex items-center">
+                                <span>Explore Services</span>
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                            <a href="#contact" class="px-8 py-4 border-2 border-gray-300 text-gray-700 font-medium rounded-button hover:border-primary hover:text-primary transition-colors">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 hidden lg:block">
+                    <div class="relative">
+                        <!-- Decorative tech elements -->
+                        <div class="absolute -top-16 -left-16 w-32 h-32 bg-primary/5 rounded-full animate-float"></div>
+                        <div class="absolute -bottom-8 -right-8 w-24 h-24 bg-secondary/5 rounded-full animate-float-delay-1"></div>
+                        
+                        <!-- Tech icons floating -->
+                        <div class="absolute top-0 left-1/4 p-4 bg-white rounded-lg shadow-lg animate-float">
+                            <i class="ri-flutter-fill ri-2x text-blue-500"></i>
+                        </div>
+                        <div class="absolute top-1/4 right-0 p-4 bg-white rounded-lg shadow-lg animate-float-delay-2">
+                            <i class="ri-reactjs-line ri-2x text-blue-400"></i>
+                        </div>
+                        <div class="absolute bottom-1/4 left-1/3 p-4 bg-white rounded-lg shadow-lg animate-float-delay-1">
+                            <i class="ri-code-s-slash-line ri-2x text-primary"></i>
+                        </div>
+                        
+                        <!-- Futuristic 3D Animation -->
+                        <div class="relative mx-auto w-80 h-96 perspective-1000">
+                            <!-- Holographic Grid Background -->
+                            <div class="holographic-grid"></div>
+                            
+                            <!-- Holographic Cube -->
+                            <div class="holographic-cube">
+                                <div class="cube-face front"></div>
+                                <div class="cube-face back"></div>
+                                <div class="cube-face right"></div>
+                                <div class="cube-face left"></div>
+                                <div class="cube-face top"></div>
+                                <div class="cube-face bottom"></div>
+                            </div>
+                            
+                            <!-- Floating Particles -->
+                            <div class="particles-container">
+                                <div class="particle p1"></div>
+                                <div class="particle p2"></div>
+                                <div class="particle p3"></div>
+                                <div class="particle p4"></div>
+                                <div class="particle p5"></div>
+                                <div class="particle p6"></div>
+                                <div class="particle p7"></div>
+                                <div class="particle p8"></div>
+                                <div class="particle p9"></div>
+                                <div class="particle p10"></div>
+                                <div class="particle p11"></div>
+                                <div class="particle p12"></div>
+                            </div>
+                            
+                            <!-- Digital Rings -->
+                            <div class="digital-rings">
+                                <div class="ring ring1"></div>
+                                <div class="ring ring2"></div>
+                                <div class="ring ring3"></div>
+                            </div>
+                            
+                            <!-- Data Stream -->
+                            <div class="data-stream">
+                                <div class="data-bit bit1">01</div>
+                                <div class="data-bit bit2">10</div>
+                                <div class="data-bit bit3">01</div>
+                                <div class="data-bit bit4">11</div>
+                                <div class="data-bit bit5">00</div>
+                                <div class="data-bit bit6">10</div>
+                            </div>
+                            
+                            <!-- Holographic Text -->
+                            <div class="holographic-text">
+                                <div class="text-white text-center">
+                                    <div class="text-3xl font-bold mb-2 glow-text glitch-text">XP</div>
+                                    <div class="text-sm glow-text-sm">Innovative Solutions</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Energy Core -->
+                            <div class="energy-core"></div>
+                            
+                            <!-- Scanning Effect -->
+                            <div class="scanner-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-1/4 right-1/4 w-16 h-16 bg-primary/20 rounded-full animate-float hidden lg:block"></div>
+        <div class="absolute bottom-1/3 right-1/3 w-12 h-12 bg-secondary/20 rounded-full animate-float-delay-1 hidden lg:block"></div>
+        <div class="absolute top-1/3 right-1/5 w-8 h-8 bg-primary/10 rounded-full animate-float-delay-2 hidden lg:block"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Mobile App Development Technology Icons -->
+        <div class="tech-icon-container">
+            <div class="floating-tech-icon tech-flutter" data-name="Flutter">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" />
+            </div>
+            <div class="floating-tech-icon tech-react" data-name="React Native">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" />
+            </div>
+            <div class="floating-tech-icon tech-swift" data-name="Swift">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" alt="Swift" />
+            </div>
+            <div class="floating-tech-icon tech-kotlin" data-name="Kotlin">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" />
+            </div>
+            <div class="floating-tech-icon tech-android" data-name="Android Studio">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio" />
+            </div>
+            <div class="floating-tech-icon tech-figma" data-name="Figma">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">We offer comprehensive solutions tailored to your business needs, helping you navigate the digital landscape with confidence.</p>
+            </div>
+            
+            <div class="mb-12 fade-in">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                        <i class="ri-code-s-slash-line ri-lg text-primary"></i>
+                    </div>
+                    Core Software Development Services
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+                    <!-- Mobile App Development -->
+                    <div class="service-card-container fade-in">
+                        <div class="service-card">
+                            <!-- Front of Card -->
+                            <div class="service-card-front">
+                                <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-5">
+                                    <i class="ri-smartphone-line ri-xl text-primary service-icon"></i>
+                                </div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-3">Mobile App Development</h4>
+                                <ul class="mt-4 space-y-2">
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">Android & iOS apps</span></li>
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">Enterprise mobility solutions</span></li>
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">E-commerce & Fintech apps</span></li>
+                                </ul>
+                                <div class="flip-btn pulse-animation">
+                                    <i class="ri-refresh-line text-white"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Back of Card -->
+                            <div class="service-card-back">
+                                <i class="ri-smartphone-line ri-2x mb-4"></i>
+                                <h4 class="text-xl font-bold mb-3">Mobile Excellence</h4>
+                                <p class="mb-4">We build beautiful, high-performance mobile applications that engage users and drive results.</p>
+                                <div class="mt-2 mb-4">
+                                    <span class="tech-tag">Flutter</span>
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">Swift</span>
+                                    <span class="tech-tag">Kotlin</span>
+                                </div>
+                                <a href="#contact" class="mt-2 px-4 py-2 bg-white text-primary font-medium rounded-full hover:bg-opacity-90 transition-colors text-sm">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Web Application Development -->
+                    <div class="service-card-container fade-in">
+                        <div class="service-card">
+                            <!-- Front of Card -->
+                            <div class="service-card-front">
+                                <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-5">
+                                    <i class="ri-global-line ri-xl text-primary service-icon"></i>
+                                </div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-3">Web Application Development</h4>
+                                <ul class="mt-4 space-y-2">
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">Progressive Web Apps</span></li>
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">Custom portals & dashboards</span></li>
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">SaaS platforms</span></li>
+                                </ul>
+                                <div class="flip-btn pulse-animation">
+                                    <i class="ri-refresh-line text-white"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Back of Card -->
+                            <div class="service-card-back">
+                                <i class="ri-global-line ri-2x mb-4"></i>
+                                <h4 class="text-xl font-bold mb-3">Web Innovation</h4>
+                                <p class="mb-4">From simple websites to complex web applications, we create digital experiences that stand out.</p>
+                                <div class="mt-2 mb-4">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Vue</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Laravel</span>
+                                </div>
+                                <a href="#contact" class="mt-2 px-4 py-2 bg-white text-primary font-medium rounded-full hover:bg-opacity-90 transition-colors text-sm">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom Software Solutions -->
+                    <div class="service-card-container fade-in">
+                        <div class="service-card">
+                            <!-- Front of Card -->
+                            <div class="service-card-front">
+                                <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-5">
+                                    <i class="ri-code-box-line ri-xl text-primary service-icon"></i>
+                                </div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-3">Custom Software Solutions</h4>
+                                <ul class="mt-4 space-y-2">
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">Tailor-made systems</span></li>
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">ERP & POS systems</span></li>
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">API integrations</span></li>
+                                </ul>
+                                <div class="flip-btn pulse-animation">
+                                    <i class="ri-refresh-line text-white"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Back of Card -->
+                            <div class="service-card-back">
+                                <i class="ri-code-box-line ri-2x mb-4"></i>
+                                <h4 class="text-xl font-bold mb-3">Custom Solutions</h4>
+                                <p class="mb-4">We develop bespoke software solutions that solve your unique business challenges.</p>
+                                <div class="mt-2 mb-4">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">C#/.NET</span>
+                                    <span class="tech-tag">AWS</span>
+                                </div>
+                                <a href="#contact" class="mt-2 px-4 py-2 bg-white text-primary font-medium rounded-full hover:bg-opacity-90 transition-colors text-sm">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- UI/UX Design -->
+                    <div class="service-card-container fade-in">
+                        <div class="service-card">
+                            <!-- Front of Card -->
+                            <div class="service-card-front">
+                                <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-5">
+                                    <i class="ri-layout-4-line ri-xl text-primary service-icon"></i>
+                                </div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-3">UI/UX Design</h4>
+                                <ul class="mt-4 space-y-2">
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">Wireframing & prototyping</span></li>
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">User research & testing</span></li>
+                                    <li class="flex items-start"><div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5"><i class="ri-check-line"></i></div><span class="ml-2 text-gray-600">Responsive UI implementation</span></li>
+                                </ul>
+                                <div class="flip-btn pulse-animation">
+                                    <i class="ri-refresh-line text-white"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Back of Card -->
+                            <div class="service-card-back">
+                                <i class="ri-layout-4-line ri-2x mb-4"></i>
+                                <h4 class="text-xl font-bold mb-3">Design Excellence</h4>
+                                <p class="mb-4">We create intuitive, beautiful interfaces that delight users and improve conversion rates.</p>
+                                <div class="mt-2 mb-4">
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">Adobe XD</span>
+                                    <span class="tech-tag">Sketch</span>
+                                    <span class="tech-tag">Webflow</span>
+                                </div>
+                                <a href="#contact" class="mt-2 px-4 py-2 bg-white text-primary font-medium rounded-full hover:bg-opacity-90 transition-colors text-sm">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="#contact" class="inline-block px-6 py-3 bg-primary text-white font-medium rounded-button hover:bg-primary/90 transition-colors">Discuss Your Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-block mb-4">
+                    <span class="px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full">FEATURED WORK</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Portfolio</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Explore our successful projects that have helped businesses transform their digital presence and operations.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3 mb-12 fade-in">
+                <button class="portfolio-filter px-6 py-3 !rounded-full bg-primary text-white font-medium whitespace-nowrap shadow-md shadow-primary/20" data-filter="all">All</button>
+                <button class="portfolio-filter px-6 py-3 !rounded-full bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors whitespace-nowrap shadow-md" data-filter="web">Web Development</button>
+                <button class="portfolio-filter px-6 py-3 !rounded-full bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors whitespace-nowrap shadow-md" data-filter="mobile">Mobile Apps</button>
+                <button class="portfolio-filter px-6 py-3 !rounded-full bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors whitespace-nowrap shadow-md" data-filter="ui-ux">UI/UX Design</button>
+                <button class="portfolio-filter px-6 py-3 !rounded-full bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors whitespace-nowrap shadow-md" data-filter="custom">Custom Software</button>
+                <button class="portfolio-filter px-6 py-3 !rounded-full bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors whitespace-nowrap shadow-md" data-filter="cloud">Cloud Solutions</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Web Projects -->
+                <div class="portfolio-item group rounded-xl overflow-hidden shadow-lg fade-in transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-category="web">
+                    <div class="relative">
+                        <img src="https://public.readdy.ai/ai/img_res/2c667054eb2aac5e67409025ff121a44.jpg" alt="E-commerce Platform" class="w-full h-64 object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white bg-gradient-to-t from-primary/90 to-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-xl font-semibold mb-2 transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0">E-commerce Platform</h3>
+                            <p class="text-center mb-4 transform translate-y-4 transition-transform duration-300 delay-75 group-hover:translate-y-0">Custom online store with integrated payment processing and inventory management.</p>
+                            <button class="view-details px-5 py-2.5 bg-white text-primary !rounded-button font-medium hover:bg-white/90 transition-colors whitespace-nowrap shadow-md transform translate-y-4 transition-transform duration-300 delay-150 group-hover:translate-y-0" data-modal="modal-1">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile App Projects -->
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="mobile">
+                    <div class="relative">
+                        <img src="images/azra.jpeg" alt="Azra Mobile App" class="w-full h-64 object-cover object-top">
+                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Azra</h3>
+                            <p class="text-center mb-4">Fintech mobile application with secure payment processing and user-friendly interface.</p>
+                            <button class="view-details px-4 py-2 bg-white text-primary !rounded-button font-medium hover:bg-white/90 transition-colors whitespace-nowrap" data-modal="modal-azra">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="mobile">
+                    <div class="relative">
+                        <img src="images/bambaswap.jpeg" alt="BambaSwap Mobile App" class="w-full h-64 object-cover object-top">
+                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">BambaSwap</h3>
+                            <p class="text-center mb-4">Cryptocurrency exchange app with real-time market data and secure wallet integration.</p>
+                            <button class="view-details px-4 py-2 bg-white text-primary !rounded-button font-medium hover:bg-white/90 transition-colors whitespace-nowrap" data-modal="modal-bambaswap">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="mobile">
+                    <div class="relative">
+                        <img src="images/nyumbani.jpeg" alt="Nyumbani Mobile App" class="w-full h-64 object-cover object-top">
+                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Nyumbani</h3>
+                            <p class="text-center mb-4">Real estate marketplace app with property listings, virtual tours, and agent connections.</p>
+                            <button class="view-details px-4 py-2 bg-white text-primary !rounded-button font-medium hover:bg-white/90 transition-colors whitespace-nowrap" data-modal="modal-nyumbani">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="mobile">
+                    <div class="relative bg-gray-100">
+                        <div class="w-full h-64 flex items-center justify-center">
+                            <i class="ri-lock-line ri-3x text-gray-400"></i>
+                        </div>
+                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Cryptalk</h3>
+                            <p class="text-center mb-4">Secure messaging app with end-to-end encryption for confidential communications.</p>
+                            <div class="px-4 py-2 bg-white/80 text-gray-700 !rounded-button font-medium whitespace-nowrap">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Projects -->
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="cloud">
+                    <div class="relative">
+                        <img src="https://public.readdy.ai/ai/img_res/aa783c0b6b92663691986bf94e46c411.jpg" alt="Cloud Migration Project" class="w-full h-64 object-cover object-top">
+                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Cloud Migration Project</h3>
+                            <p class="text-center mb-4">Enterprise-level migration to AWS with custom monitoring and scaling solutions.</p>
+                            <button class="view-details px-4 py-2 bg-white text-primary !rounded-button font-medium hover:bg-white/90 transition-colors whitespace-nowrap" data-modal="modal-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="web">
+                    <div class="relative">
+                        <img src="https://public.readdy.ai/ai/img_res/1dd1ee309b1a6f532c4167808bc1c1d5.jpg" alt="Financial Dashboard" class="w-full h-64 object-cover object-top">
+                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Financial Dashboard</h3>
+                            <p class="text-center mb-4">Real-time financial analytics platform with customizable reporting features.</p>
+                            <button class="view-details px-4 py-2 bg-white text-primary !rounded-button font-medium hover:bg-white/90 transition-colors whitespace-nowrap" data-modal="modal-4">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="custom">
+                    <div class="relative">
+                        <img src="https://public.readdy.ai/ai/img_res/45e8be0caf3d6e6eda64e90c6c6f5d70.jpg" alt="Logistics Management System" class="w-full h-64 object-cover object-top">
+                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Logistics Management System</h3>
+                            <p class="text-center mb-4">End-to-end supply chain tracking and optimization platform for global operations.</p>
+                            <button class="view-details px-4 py-2 bg-white text-primary !rounded-button font-medium hover:bg-white/90 transition-colors whitespace-nowrap" data-modal="modal-5">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="ui-ux">
+                    <div class="relative">
+                        <img src="https://public.readdy.ai/ai/img_res/3e6cf513e193bb19bdc4348ad7294453.jpg" alt="E-Learning Platform" class="w-full h-64 object-cover object-top">
+                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">E-Learning Platform</h3>
+                            <p class="text-center mb-4">Interactive online learning system with progress tracking and certification.</p>
+                            <button class="view-details px-4 py-2 bg-white text-primary !rounded-button font-medium hover:bg-white/90 transition-colors whitespace-nowrap" data-modal="modal-6">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12 fade-in">
+                <button id="load-more" class="px-8 py-3 border-2 border-gray-300 text-gray-700 !rounded-button font-medium hover:border-primary hover:text-primary transition-colors whitespace-nowrap">Load More Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals for Portfolio Details -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content rounded-xl shadow-2xl">
+            <button class="modal-close hover:text-primary transition-colors" aria-label="Close modal">&times;</button>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">E-commerce Platform</h3>
+            <img src="https://public.readdy.ai/ai/img_res/2c667054eb2aac5e67409025ff121a44.jpg" alt="E-commerce Platform" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 mb-4">A fully custom online store built with integrated payment processing (Stripe, PayPal), real-time inventory management, and a user-friendly admin dashboard. Launched in 2024, it increased client sales by 35% within six months.</p>
+            <p class="text-gray-600"><strong>Technologies:</strong> React, Node.js, MongoDB, AWS</p>
+        </div>
+    </div>
+    
+    <!-- Mobile App Modals -->
+    <div id="modal-azra" class="modal">
+        <div class="modal-content">
+            <button class="modal-close hover:text-primary transition-colors" aria-label="Close modal">&times;</button>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Azra Mobile App</h3>
+            <img src="images/azra.jpeg" alt="Azra Mobile App" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 mb-4">A fintech mobile application that enables secure payment processing, financial tracking, and budget management. The app features biometric authentication, real-time transaction notifications, and an intuitive user interface designed for optimal user experience.</p>
+            <p class="text-gray-600"><strong>Technologies:</strong> Flutter, Firebase, RESTful APIs, Secure Payment Gateways</p>
+        </div>
+    </div>
+    
+    <div id="modal-bambaswap" class="modal">
+        <div class="modal-content">
+            <button class="modal-close hover:text-primary transition-colors" aria-label="Close modal">&times;</button>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">BambaSwap Crypto Exchange</h3>
+            <img src="images/bambaswap.jpeg" alt="BambaSwap App" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 mb-4">A cryptocurrency exchange application that allows users to buy, sell, and trade digital assets securely. Features include real-time market data, price alerts, secure wallet integration, and comprehensive transaction history. The app has seen a 45% increase in active users since launch.</p>
+            <p class="text-gray-600"><strong>Technologies:</strong> React Native, Blockchain APIs, Redux, Secure Authentication</p>
+        </div>
+    </div>
+    
+    <div id="modal-nyumbani" class="modal">
+        <div class="modal-content">
+            <button class="modal-close hover:text-primary transition-colors" aria-label="Close modal">&times;</button>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Nyumbani Real Estate App</h3>
+            <img src="images/nyumbani.jpeg" alt="Nyumbani App" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 mb-4">A comprehensive real estate marketplace application that connects property buyers, sellers, and agents. Features include property listings with high-quality images, virtual tours, in-app messaging, appointment scheduling, and mortgage calculators. The platform has facilitated over 500 property transactions since launch.</p>
+            <p class="text-gray-600"><strong>Technologies:</strong> Flutter, Google Maps API, Firebase, Cloud Storage</p>
+        </div>
+    </div>
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <button class="modal-close hover:text-primary transition-colors" aria-label="Close modal">&times;</button>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Cloud Migration Project</h3>
+            <img src="https://public.readdy.ai/ai/img_res/aa783c0b6b92663691986bf94e46c411.jpg" alt="Cloud Migration Project" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 mb-4">Migrated a legacy enterprise system to AWS, implementing custom monitoring with CloudWatch and auto-scaling. Completed in 2023, reducing operational costs by 25%.</p>
+            <p class="text-gray-600"><strong>Technologies:</strong> AWS (EC2, RDS, Lambda), Terraform</p>
+        </div>
+    </div>
+    <div id="modal-4" class="modal">
+        <div class="modal-content">
+            <button class="modal-close hover:text-primary transition-colors" aria-label="Close modal">&times;</button>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Financial Dashboard</h3>
+            <img src="https://public.readdy.ai/ai/img_res/1dd1ee309b1a6f532c4167808bc1c1d5.jpg" alt="Financial Dashboard" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 mb-4">A real-time financial analytics platform with customizable reporting and data visualization. Delivered for a fintech startup, enhancing decision-making speed by 50%.</p>
+            <p class="text-gray-600"><strong>Technologies:</strong> Vue.js, Python (Django), PostgreSQL</p>
+        </div>
+    </div>
+    <div id="modal-5" class="modal">
+        <div class="modal-content">
+            <span class="modal-close hover:text-primary transition-colors">&times;</span>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Logistics Management System</h3>
+            <img src="https://public.readdy.ai/ai/img_res/45e8be0caf3d6e6eda64e90c6c6f5d70.jpg" alt="Logistics Management System" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 mb-4">An end-to-end supply chain platform with real-time tracking and optimization algorithms. Implemented for a global logistics firm, reducing delivery times by 20%.</p>
+            <p class="text-gray-600"><strong>Technologies:</strong> Angular, Spring Boot, MySQL, Google Maps API</p>
+        </div>
+    </div>
+    <div id="modal-6" class="modal">
+        <div class="modal-content">
+            <span class="modal-close hover:text-primary transition-colors">&times;</span>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">E-Learning Platform</h3>
+            <img src="https://public.readdy.ai/ai/img_res/3e6cf513e193bb19bdc4348ad7294453.jpg" alt="E-Learning Platform" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 mb-4">An interactive online learning system with progress tracking, quizzes, and certification. Built for an educational institute, increasing course completion rates by 30%.</p>
+            <p class="text-gray-600"><strong>Technologies:</strong> React, Express.js, MongoDB, AWS S3</p>
+        </div>
+    </div>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-block mb-4">
+                    <span class="px-4 py-1 bg-secondary/10 text-secondary text-sm font-medium rounded-full">OUR APPROACH</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Development Process</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">We follow a structured, collaborative approach to ensure your project is delivered on time, within budget, and exceeds expectations.</p>
+            </div>
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200"></div>
+                <div class="timeline-item relative mb-16 fade-in">
+                    <div class="flex items-center justify-center">
+                        <div class="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-primary z-10 shadow-md shadow-primary/20"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="md:text-right md:pr-12">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">1. Discovery & Planning</h3>
+                            <p class="text-gray-600">We begin by understanding your business goals, target audience, and project requirements through in-depth consultations.</p>
+                        </div>
+                        <div class="md:pl-12">
+                            <img src="https://public.readdy.ai/ai/img_res/ed3ded9bc222d5c9ce422fe521e7e6e7.jpg" alt="Discovery Phase" class="rounded-lg shadow-md w-full h-48 object-cover object-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item relative mb-16 fade-in">
+                    <div class="flex items-center justify-center">
+                        <div class="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-primary z-10"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="md:order-2 md:text-left md:pl-12">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">2. Design & Prototyping</h3>
+                            <p class="text-gray-600">Our design team creates intuitive interfaces and user experiences, with interactive prototypes for your feedback.</p>
+                        </div>
+                        <div class="md:order-1 md:pr-12">
+                            <img src="https://public.readdy.ai/ai/img_res/9575fead623463138bc6a06f0b3b61aa.jpg" alt="Design Phase" class="rounded-lg shadow-md w-full h-48 object-cover object-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item relative mb-16 fade-in">
+                    <div class="flex items-center justify-center">
+                        <div class="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-primary z-10"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="md:text-right md:pr-12">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">3. Development & Testing</h3>
+                            <p class="text-gray-600">Our development team brings designs to life using the latest technologies, with rigorous testing at every stage.</p>
+                        </div>
+                        <div class="md:pl-12">
+                            <img src="https://public.readdy.ai/ai/img_res/5d4fe8dd76bc856b15f60e5948ba0b84.jpg" alt="Development Phase" class="rounded-lg shadow-md w-full h-48 object-cover object-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item relative fade-in">
+                    <div class="flex items-center justify-center">
+                        <div class="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-primary z-10"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="md:order-2 md:text-left md:pl-12">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">4. Deployment & Support</h3>
+                            <p class="text-gray-600">We ensure smooth deployment and provide ongoing maintenance and support to keep your solution running optimally.</p>
+                        </div>
+                        <div class="md:order-1 md:pr-12">
+                            <img src="https://public.readdy.ai/ai/img_res/0273b5344c4e82e104cb3325017fd8c9.jpg" alt="Deployment Phase" class="rounded-lg shadow-md w-full h-48 object-cover object-top">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Hosting & Domains Section -->
+    <section id="hosting" class="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden relative">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-10">
+            <div class="server-grid"></div>
+            <div class="server-pulse"></div>
+            <div class="domain-particle d1"></div>
+            <div class="domain-particle d2"></div>
+            <div class="domain-particle d3"></div>
+            <div class="domain-particle d4"></div>
+            <div class="domain-particle d5"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-block mb-4 relative">
+                    <span class="px-4 py-1 bg-secondary/10 text-secondary text-sm font-medium rounded-full inline-flex items-center">
+                        <i class="ri-server-fill mr-2 animate-pulse"></i>
+                        HOSTING & DOMAINS
+                    </span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Reliable Hosting & Domain Solutions</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Launch your digital presence with our high-performance hosting packages and domain registration services.</p>
+            </div>
+            
+            <!-- Hosting Plans -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center justify-center">
+                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                        <i class="ri-server-line text-primary"></i>
+                    </div>
+                    Web Hosting Plans
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8 border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in">
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 pricing-icon">
+                                <i class="ri-rocket-line ri-lg text-primary"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Starter</h4>
+                            <div class="mt-4 mb-6 relative">
+                                <div class="absolute -top-3 -right-3 bg-green-100 text-green-800 text-xs font-semibold px-2 py-0.5 rounded-full">Save 20%</div>
+                                <span class="text-4xl font-bold text-gray-900">$4.99</span>
+                                <span class="text-gray-500">/month</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start pricing-feature-tag">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">1 Website</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">10GB SSD Storage</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Unmetered Bandwidth</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Free SSL Certificate</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">1 Email Account</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-gray-300 mt-0.5">
+                                    <i class="ri-close-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-400">Daily Backups</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#contact" class="inline-block w-full px-6 py-3 border-2 border-primary text-primary font-medium rounded-button hover:bg-primary hover:text-white transition-colors">Choose Plan</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Business Plan -->
+                    <div class="pricing-card bg-white rounded-xl shadow-xl p-8 border-2 border-primary relative transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl fade-in">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white text-sm font-bold px-4 py-1 rounded-full">MOST POPULAR</div>
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-4 pricing-icon">
+                                <i class="ri-building-line ri-lg text-primary"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Business</h4>
+                            <div class="mt-4 mb-6">
+                                <span class="text-4xl font-bold text-gray-900">$9.99</span>
+                                <span class="text-gray-500">/month</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Unlimited Websites</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">50GB SSD Storage</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Unmetered Bandwidth</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Free SSL Certificate</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">10 Email Accounts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Daily Backups</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#contact" class="inline-block w-full px-6 py-3 bg-primary text-white font-medium rounded-button hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">Choose Plan</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8 border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in">
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 pricing-icon">
+                                <i class="ri-vip-crown-line ri-lg text-primary"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Enterprise</h4>
+                            <div class="mt-4 mb-6">
+                                <span class="text-4xl font-bold text-gray-900">$19.99</span>
+                                <span class="text-gray-500">/month</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Unlimited Websites</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">100GB SSD Storage</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Unmetered Bandwidth</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Free SSL Certificate</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Unlimited Email Accounts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Daily Backups + CDN</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#contact" class="inline-block w-full px-6 py-3 border-2 border-primary text-primary font-medium rounded-button hover:bg-primary hover:text-white transition-colors">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Domain Pricing -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center justify-center">
+                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                        <i class="ri-global-line text-primary"></i>
+                    </div>
+                    Domain Registration
+                </h3>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 mt-10 fade-in">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="border-b border-gray-200">
+                                    <th class="py-4 px-6 text-gray-900 font-semibold">Domain Type</th>
+                                    <th class="py-4 px-6 text-gray-900 font-semibold">Registration</th>
+                                    <th class="py-4 px-6 text-gray-900 font-semibold">Renewal</th>
+                                    <th class="py-4 px-6 text-gray-900 font-semibold">Transfer</th>
+                                    <th class="py-4 px-6 text-gray-900 font-semibold"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors domain-row">
+                                    <td class="py-4 px-6 font-medium text-gray-900">
+                                        <div class="flex items-center">
+                                            <span class="inline-block w-3 h-3 bg-primary rounded-full mr-2 animate-pulse"></span>
+                                            .com
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-gray-600">$12.99/year</td>
+                                    <td class="py-4 px-6 text-gray-600">$14.99/year</td>
+                                    <td class="py-4 px-6 text-gray-600">$12.99</td>
+                                    <td class="py-4 px-6">
+                                        <a href="#contact" class="px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full hover:bg-primary/20 transition-colors domain-btn">Register</a>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors domain-row">
+                                    <td class="py-4 px-6 font-medium text-gray-900">
+                                        <div class="flex items-center">
+                                            <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                                            .co.ke
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-gray-600">$9.99/year</td>
+                                    <td class="py-4 px-6 text-gray-600">$9.99/year</td>
+                                    <td class="py-4 px-6 text-gray-600">$9.99</td>
+                                    <td class="py-4 px-6">
+                                        <a href="#contact" class="px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full hover:bg-primary/20 transition-colors domain-btn">Register</a>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors domain-row">
+                                    <td class="py-4 px-6 font-medium text-gray-900">
+                                        <div class="flex items-center">
+                                            <span class="inline-block w-3 h-3 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
+                                            .org
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-gray-600">$13.99/year</td>
+                                    <td class="py-4 px-6 text-gray-600">$15.99/year</td>
+                                    <td class="py-4 px-6 text-gray-600">$13.99</td>
+                                    <td class="py-4 px-6">
+                                        <a href="#contact" class="px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full hover:bg-primary/20 transition-colors domain-btn">Register</a>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors domain-row">
+                                    <td class="py-4 px-6 font-medium text-gray-900">
+                                        <div class="flex items-center">
+                                            <span class="inline-block w-3 h-3 bg-indigo-500 rounded-full mr-2 animate-pulse"></span>
+                                            .net
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-gray-600">$13.99/year</td>
+                                    <td class="py-4 px-6 text-gray-600">$15.99/year</td>
+                                    <td class="py-4 px-6 text-gray-600">$13.99</td>
+                                    <td class="py-4 px-6">
+                                        <a href="#contact" class="px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full hover:bg-primary/20 transition-colors domain-btn">Register</a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors domain-row">
+                                    <td class="py-4 px-6 font-medium text-gray-900">
+                                        <div class="flex items-center">
+                                            <span class="inline-block w-3 h-3 bg-pink-500 rounded-full mr-2 animate-pulse"></span>
+                                            .info
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-gray-600">$10.99/year</td>
+                                    <td class="py-4 px-6 text-gray-600">$12.99/year</td>
+                                    <td class="py-4 px-6 text-gray-600">$10.99</td>
+                                    <td class="py-4 px-6">
+                                        <a href="#contact" class="px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full hover:bg-primary/20 transition-colors domain-btn">Register</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <div class="bg-gray-50 rounded-lg p-6 inline-block max-w-2xl mx-auto">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-3 flex items-center justify-center">
+                            <i class="ri-shield-check-line text-primary mr-2"></i> Domain Features
+                        </h4>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Free WHOIS Privacy Protection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Easy Domain Management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">DNS Management Tools</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">Domain Forwarding</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <div class="inline-block relative">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium text-gray-700 animate-bounce">
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white"></div>
+                        24/7 Support Available!
+                    </div>
+                    <a href="#contact" class="inline-block px-8 py-4 bg-primary text-white font-medium rounded-button hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 flex items-center mx-auto relative overflow-hidden group">
+                        <div class="absolute inset-0 w-full h-full transition-all duration-300 scale-0 group-hover:scale-100 group-hover:bg-white/10 rounded-button"></div>
+                        <i class="ri-customer-service-2-line mr-2 relative z-10"></i>
+                        <span class="relative z-10">Need Help? Contact Our Hosting Experts</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                    <p class="text-lg text-gray-600 mb-8">Ready to start your project? Contact us today for a free consultation and quote.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                <i class="ri-map-pin-line ri-lg text-primary"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Our Location</h3>
+                                <p class="text-gray-600">123 Innovation Drive, Tech Park, Westlands, Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                <i class="ri-mail-line ri-lg text-primary"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Email Us</h3>
+                                <a href="mailto:info@innovatesolutions.com" class="text-gray-600 hover:text-primary">info@xpinnovativeolutions.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                <i class="ri-phone-line ri-lg text-primary"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Call Us</h3>
+                                <a href="tel:+14155550123" class="text-gray-600 hover:text-primary">+254 (797) 000-0000</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" title="Visit our LinkedIn profile" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center social-icon">
+                                <i class="ri-linkedin-fill ri-lg text-gray-600"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener" title="Visit our Twitter profile" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center social-icon">
+                                <i class="ri-twitter-fill ri-lg text-gray-600"></i>
+                            </a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener" title="Visit our Facebook profile" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center social-icon">
+                                <i class="ri-facebook-fill ri-lg text-gray-600"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener" title="Visit our Instagram profile" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center social-icon">
+                                <i class="ri-instagram-fill ri-lg text-gray-600"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                                <i class="ri-mail-send-line text-primary"></i>
+                            </div>
+                            Send Us a Message
+                        </h3>
+                        <form id="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                    <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" placeholder="John Smith" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" placeholder="Project Inquiry" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                            <div class="mb-6 flex items-center">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter" class="text-sm text-gray-600 ml-3">Subscribe to our newsletter for industry insights and updates</label>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-3 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="h-96 relative">
+        <iframe class="absolute inset-0 w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019177596318!2d-122.4194156846813!3d37.77492977975966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f5e0e5e5f%3A0x8e5e5e5e5e5e5e5e!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1630000000000" allowfullscreen="" title="Google Maps showing San Francisco, CA"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="#home" class="text-2xl font-['Pacifico'] text-white mb-6 block">XP Innovative Solutions</a>
+                    <p class="text-gray-400 mb-6">Empowering businesses with innovative technology solutions since 2025. We transform ideas into digital reality.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" title="Visit our LinkedIn profile" class="text-gray-400 hover:text-white transition-colors"><i class="ri-linkedin-fill ri-lg"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" title="Visit our Twitter profile" class="text-gray-400 hover:text-white transition-colors"><i class="ri-twitter-fill ri-lg"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" title="Visit our Facebook profile" class="text-gray-400 hover:text-white transition-colors"><i class="ri-facebook-fill ri-lg"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" title="Visit our Instagram profile" class="text-gray-400 hover:text-white transition-colors"><i class="ri-instagram-fill ri-lg"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#process" class="text-gray-400 hover:text-white transition-colors">Process</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Custom Software Development</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Mobile App Development</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Cloud Solutions</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest industry insights and company news.</p>
+                    <form id="newsletter-form" action="https://formspree.io/f/your-newsletter-id" method="POST">
+                        <div class="flex">
+                            <input type="email" name="email" placeholder="Your email address" class="px-4 py-2 w-full border-none rounded-l focus:outline-none text-gray-800" required>
+                            <button type="submit" class="bg-primary text-white px-4 py-2 rounded-r hover:bg-primary/90 transition-colors whitespace-nowrap">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="flex items-center space-x-4 mt-4">
+                        <span class="text-gray-400">Payment Options:</span>
+                        <div class="flex space-x-2">
+                            <i class="ri-visa-fill ri-lg text-gray-400"></i>
+                            <i class="ri-mastercard-fill ri-lg text-gray-400"></i>
+                            <i class="ri-paypal-fill ri-lg text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0"> 2025 XP Innovative Solutions. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="https://example.com/privacy" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+                        <a href="https://example.com/terms" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+                        <a href="https://example.com/cookies" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white shadow-lg flex items-center justify-center opacity-0 invisible" aria-label="Back to top">
+        <i class="ri-arrow-up-line ri-lg" aria-hidden="true"></i>
+    </button>
+
+    <script>
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        function checkFade() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) element.classList.add('visible');
+            });
+        }
+        checkFade();
+        window.addEventListener('scroll', checkFade);
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        function headerScroll() {
+            if (window.scrollY > 50) header.classList.add('bg-white', 'shadow-md'), header.classList.remove('bg-transparent');
+            else header.classList.remove('bg-white', 'shadow-md'), header.classList.add('bg-transparent');
+        }
+        headerScroll();
+        window.addEventListener('scroll', headerScroll);
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        function toggleBackToTop() {
+            if (window.scrollY > 500) backToTopButton.classList.add('visible');
+            else backToTopButton.classList.remove('visible');
+        }
+        toggleBackToTop();
+        window.addEventListener('scroll', toggleBackToTop);
+        backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuCloseButton = document.getElementById('mobile-menu-close');
+        mobileMenuButton.addEventListener('click', () => mobileMenu.style.display = 'flex');
+        mobileMenuCloseButton.addEventListener('click', () => mobileMenu.style.display = 'none');
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.style.display = 'none'));
+
+        // Portfolio filtering
+        const portfolioFilters = document.querySelectorAll('.portfolio-filter');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        function filterPortfolio(filter) {
+            portfolioItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+        portfolioFilters.forEach(button => {
+            button.addEventListener('click', () => {
+                portfolioFilters.forEach(btn => {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-100', 'text-gray-700');
+                });
+                button.classList.remove('bg-gray-100', 'text-gray-700');
+                button.classList.add('bg-primary', 'text-white');
+                const filter = button.getAttribute('data-filter');
+                filterPortfolio(filter);
+            });
+        });
+
+        // Modal functionality
+        const viewDetailsButtons = document.querySelectorAll('.view-details');
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.modal-close');
+
+        viewDetailsButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+            });
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal');
+                modal.style.display = 'none';
+            });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            modals.forEach(modal => {
+                if (e.target === modal) modal.style.display = 'none';
+            });
+        });
+
+        // Load more projects (mock functionality)
+        document.getElementById('load-more').addEventListener('click', () => alert('More projects coming soon!'));
+
+        // Form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.submit(); // Replace with actual Formspree ID for real submission
+            alert('Message sent successfully!');
+            this.reset();
+        });
+
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.submit(); // Replace with actual Formspree ID for real submission
+            alert('Subscribed successfully!');
+            this.reset();
+        });
+
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
