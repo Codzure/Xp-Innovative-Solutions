@@ -1,15 +1,11 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "xp.html",
-      "use": "@vercel/static"
-    }
+    { "src": "*.{html,js,css}", "use": "@vercel/static" },
+    { "src": "api/contact.js", "use": "@vercel/node" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/xp.html"
-    }
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/xp.html" }
   ]
 }

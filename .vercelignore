@@ -1,0 +1,13 @@
+# Ignore images directory
+images/*
+
+# Ignore environment files
+.env
+
+# Ignore node modules
+node_modules/
+
+# Ignore build files
+.next/
+.vscode/
+.vercel/
