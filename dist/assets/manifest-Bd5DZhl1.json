@@ -1,0 +1,21 @@
+{
+  "name": "XP Innovative Solutions",
+  "short_name": "XP Solutions",
+  "description": "Elevate Your Digital Presence with XP Innovative Solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

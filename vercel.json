@@ -1,11 +1,14 @@
 {
   "version": 2,
   "builds": [
-    { "src": "*.{html,js,css}", "use": "@vercel/static" },
+    { "src": "package.json", "use": "@vercel/static-build" },
     { "src": "api/contact.js", "use": "@vercel/node" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "^/images/(.*)", "dest": "/public/images/$1" },
+    { "src": "^/(.*\\.(jpg|jpeg|png|gif|ico|svg|webp|woff|woff2|ttf|eot))$", "dest": "/public/$1" },
     { "src": "/(.*)", "dest": "/xp.html" }
-  ]
+  ],
+  "outputDirectory": "dist"
 }
