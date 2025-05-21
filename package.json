@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "convert:images": "node scripts/convert-images.js",
+    "prebuild": "npm run convert:images",
     "build": "vite build && cp -r public/. dist/public",
     "preview": "vite preview",
     "start": "vercel dev",
-    "deploy": "vercel --prod"
+    "deploy": "npm run build && vercel --prod"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.4",
@@ -17,7 +19,9 @@
     "vercel": "^32.6.3"
   },
   "devDependencies": {
-    "vite": "^5.0.0"
+    "sharp": "^0.34.2",
+    "vite": "^5.0.0",
+    "vite-plugin-image-optimizer": "^1.1.8"
   },
   "engines": {
     "node": ">=14.0.0"

@@ -1,0 +1,65 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Run Linter
+      run: npm run lint
+    
+    - name: Run Tests
+      run: npm test
+    
+    - name: Build Project
+      run: npm run build
+    
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: production-build
+        path: dist/
+        retention-days: 5
+
+  deploy:
+    name: Deploy to Vercel
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Vercel CLI
+      run: npm install --global vercel@latest
+    
+    - name: Pull Vercel Environment Information
+      run: vercel pull --yes --environment=${{ github.ref_name == 'main' && 'production' || 'preview' }} --token ${{ secrets.VERCEL_TOKEN }}
+    
+    - name: Build Project Artifacts
+      run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
+    
+    - name: Deploy to Vercel
+      run: vercel deploy --prebuilt --token ${{ secrets.VERCEL_TOKEN }} ${{ github.ref_name == 'main' && '--prod' || '' }}

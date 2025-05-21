@@ -770,8 +770,16 @@
                 <a href="#portfolio" class="nav-link text-gray-800 font-medium">Portfolio</a>
                 <a href="#process" class="nav-link text-gray-800 font-medium">Process</a>
                 <a href="#contact" class="nav-link text-gray-800 font-medium">Contact</a>
+                <div class="flex items-center">
+                    <button id="theme-toggle" type="button" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors mr-2" aria-label="Toggle dark mode">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="sun-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            <path id="moon-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                    <a href="#contact" class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Get in Touch</a>
+                </div>
             </nav>
-            <a href="#contact" class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Get in Touch</a>
             <button id="mobile-menu-button" class="lg:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
                 <i class="ri-menu-line ri-2x" aria-hidden="true"></i>
             </button>
@@ -1118,7 +1126,14 @@
                 <!-- Web Projects -->
                 <div class="portfolio-item group rounded-xl overflow-hidden shadow-lg fade-in transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-category="web">
                     <div class="relative">
-                        <img src="https://public.readdy.ai/ai/img_res/2c667054eb2aac5e67409025ff121a44.jpg" alt="E-commerce Platform" class="w-full h-64 object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                        <img 
+  src="https://public.readdy.ai/ai/img_res/2c667054eb2aac5e67409025ff121a44.jpg" 
+  alt="E-commerce Platform" 
+  class="w-full h-64 object-cover object-top transition-transform duration-700 group-hover:scale-110"
+  loading="lazy"
+  width="400"
+  height="256"
+  decoding="async">
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white bg-gradient-to-t from-primary/90 to-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <h3 class="text-xl font-semibold mb-2 transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0">E-commerce Platform</h3>
                             <p class="text-center mb-4 transform translate-y-4 transition-transform duration-300 delay-75 group-hover:translate-y-0">Custom online store with integrated payment processing and inventory management.</p>
@@ -1130,7 +1145,18 @@
                 <!-- Mobile App Projects -->
                 <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="mobile">
                     <div class="relative">
-                        <img src="/images/azra.jpeg" alt="Azra Mobile App" class="w-full h-64 object-cover object-top">
+                        <picture>
+  <source srcset="/images/azra.webp" type="image/webp">
+  <source srcset="/images/azra.jpeg" type="image/jpeg">
+  <img 
+    src="/images/azra.jpeg" 
+    alt="Azra Mobile App" 
+    class="w-full h-64 object-cover object-top"
+    loading="lazy"
+    width="400"
+    height="256"
+    decoding="async">
+</picture>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
                             <h3 class="text-xl font-semibold mb-2">Azra</h3>
                             <p class="text-center mb-4">Fintech mobile application with secure payment processing and user-friendly interface.</p>
@@ -1141,7 +1167,18 @@
                 
                 <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="mobile">
                     <div class="relative">
-                        <img src="/images/bambaswap.jpeg" alt="BambaSwap Mobile App" class="w-full h-64 object-cover object-top">
+                        <picture>
+  <source srcset="/images/bambaswap.webp" type="image/webp">
+  <source srcset="/images/bambaswap.jpeg" type="image/jpeg">
+  <img 
+    src="/images/bambaswap.jpeg" 
+    alt="BambaSwap Mobile App" 
+    class="w-full h-64 object-cover object-top"
+    loading="lazy"
+    width="400"
+    height="256"
+    decoding="async">
+</picture>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
                             <h3 class="text-xl font-semibold mb-2">BambaSwap</h3>
                             <p class="text-center mb-4">Cryptocurrency exchange app with real-time market data and secure wallet integration.</p>
@@ -1152,7 +1189,18 @@
                 
                 <div class="portfolio-item rounded-lg overflow-hidden shadow-md fade-in" data-category="mobile">
                     <div class="relative">
-                        <img src="/images/nyumbani.jpeg" alt="Nyumbani Mobile App" class="w-full h-64 object-cover object-top">
+                        <picture>
+  <source srcset="/images/nyumbani.webp" type="image/webp">
+  <source srcset="/images/nyumbani.jpeg" type="image/jpeg">
+  <img 
+    src="/images/nyumbani.jpeg" 
+    alt="Nyumbani Mobile App" 
+    class="w-full h-64 object-cover object-top"
+    loading="lazy"
+    width="400"
+    height="256"
+    decoding="async">
+</picture>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
                             <h3 class="text-xl font-semibold mb-2">Nyumbani</h3>
                             <p class="text-center mb-4">Real estate marketplace app with property listings, virtual tours, and agent connections.</p>
@@ -2085,5 +2133,8 @@
             });
         }
     </script>
+    <script src="js/main.js"></script>
+    <!-- Dark Mode Script -->
+    <script src="js/dark-mode.js"></script>
 </body>
 </html>
